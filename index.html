@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-white dark:bg-gray-950">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>project</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="description" content=""/>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+      :root { --font-sans: "DM Sans", sans-serif; }
+      .feather { stroke-width: 1; }
+    </style>
+    <link rel="icon" href="favicon.png">
+  </head>
+  <body class="text-black dark:text-white min-h-screen grid grid-rows-[1fr_auto]" style="margin: 0px;">
+    <div class="fixed border-b border-gray-950/20 dark:border-white/10 w-full">
+      <div class="bg-white dark:bg-gray-950">
+        <div class="grid grid-cols-[auto_1fr_auto] h-16 items-center px-4">
+          <div class="text-black dark:text-white">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 0 172 32" stroke="currentColor" fill="currentColor"><text style="font-weight:600;font-size:20px;font-family:mono;stroke:none" x="42.464844" y="22.578438">placeholder</text><path style="fill:none;stroke-width:2" d="M 1,1 H 31 V 31 H 1 Z"/><path style="stroke-width:2" d="M 1,1 31.000001,31.000001"/><path style="stroke-width:2" d="M 31.000001,1 1,31.000001"/></svg>
+            </a>
+          </div>
+          <div>
+          </div>
+          <div class="grid grid-flow-col gap-2 place-items-center">
+            <button class="p-1 rounded-md border border-gray-950/20 dark:border-white/10 text-gray-400 mr-2">
+              <i data-feather="inbox" class="text-gray-500"></i>
+            </button>
+            <button class="grid items-center rounded-md overflow-clip w-full cursor-pointer" onclick="document.getElementById('usermenu').toggleAttribute('hidden')">
+              <img class="h-10" src="/assets/jsmith.png"/>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute border rounded-xl border-gray-950/20 dark:border-white/10 bg-white dark:bg-gray-950 right-2 top-16 p-2 grid shadow-md/10 dark:shadow-md/60" id="usermenu">
+
+      <div class="grid grid-cols-[auto_auto_1fr] gap-2 items-center p-1 w-56" href="#">
+        <img class="h-10 rounded-md" src="/assets/jsmith.png"/>
+        <div>
+          <div class="font-bold leading-5">
+            John Smith
+          </div>
+          <div class="font-normal text-black/50 dark:text-white/50 text-sm/5">
+            (jsmith)
+          </div>
+        </div>
+        <a class="ml-auto p-2 rounded-lg hover:bg-white/10">
+          <i data-feather="users" class="h-5 w-5"></i>
+        </a>
+      </div>
+
+      <!-- <hr class="border-gray-950/20 dark:border-white/10 border-1 rounded-full"> -->
+
+      <!-- <a class="grid grid-cols-[auto_auto_1fr] gap-4 items-center rounded-lg hover:bg-white/10" href="#">
+        <img class="h-10 rounded-md" src="/assets/acme.co.png"/>
+        <div class="font-bold">
+          ACME Corp. 
+        </div>
+        <div class="font-normal text-black/50 dark:text-white/50 ml-auto">
+          (acme.co)
+        </div>
+      </a> -->
+
+      <hr class="border-gray-950/20 dark:border-white/10 border-1 rounded-full m-1">
+
+      <a class="grid grid-cols-[auto_1fr] gap-2 items-center rounded-lg hover:bg-white/10 p-1" href="#">
+        <i data-feather="user" class="mx-auto h-5 w-5"></i>
+        <div>Profile</div>
+      </a>
+
+      <a class="grid grid-cols-[auto_1fr] gap-2 items-center rounded-lg hover:bg-white/10 p-1" href="#">
+        <i data-feather="settings" class="mx-auto h-5 w-5"></i>
+        <div>Settings</div>
+      </a>
+
+      <hr class="border-gray-950/20 dark:border-white/10 border-1 rounded-full m-1">
+
+      <a class="grid grid-cols-[auto_1fr] gap-2 items-center rounded-lg hover:bg-white/10 p-1" href="#">
+        <i data-feather="log-out" class="mx-auto h-5 w-5"></i>
+        <div>Sign out</div>
+      </a>
+
+    </div>
+
+    <div class="pt-16">
+      <div class="h-4 bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-gray-950)]/20 dark:[--pattern-fg:var(--color-white)]/10 border-b border-gray-950/20 dark:border-white/10">
+      </div>
+    </div>
+
+    <div>
+      <div class="h-4 bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-gray-950)]/20 dark:[--pattern-fg:var(--color-white)]/10 border-y border-gray-950/20 dark:border-white/10">
+      </div>
+      <div class="grid grid-cols-[1fr_auto] p-4 text-xs text-black/40 dark:text-white/40">
+        <div class="flex gap-4 flex-col lg:flex-row">
+          <a href="#">Terms of Service</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Security Notices</a>
+          <a href="#">Status</a>
+          <a href="#">Documentation</a>
+        </div>
+        <div class="place-self-center">
+          © 2026 Placeholder, Inc.
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    feather.replace()
+
+    // Applies `non-scaling-stroke` on all feather icons so scaling preserves
+    // stroke width
+    Array.from(document.getElementsByClassName("feather"))
+      .map(elem => {
+          Array.from(elem.children)
+            .map(child => {
+              child.setAttribute("vector-effect", "non-scaling-stroke")
+            });
+      });
+  </script>
+</html>
