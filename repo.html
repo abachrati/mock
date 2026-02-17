@@ -17,16 +17,6 @@
     <link rel="icon" href="favicon.png">
   </head>
   <body class="text-black/80 dark:text-white/80 min-h-screen grid grid-cols-[auto_1fr] grid-rows-[calc(var(--spacing)_*_16)_1fr] m-0">
-
-    <!-- Stickies-->
-    <div class="block absolute left-8 top-90 bg-yellow-200 w-48 p-4 text-lg text-black font-['Handlee'] hover:opacity-10 transition-opacity">
-      Adaptive sidebar to the current view (in repo, tickets, etc.)
-    </div>
-
-    <div class="block absolute left-8 top-120 bg-yellow-200 w-48 p-4 text-lg text-black font-['Handlee'] hover:opacity-10 transition-opacity">
-      Sidebar collapses to just show icons. On small screens, sidebar is hidden, and opens as floating with a 'hamburger' button.
-    </div>
-
     <!-- Header -->
     <div class="bg-black/6 dark:bg-black col-span-full grid grid-cols-[1fr_1fr_1fr] h-16 place-items-center  bg-clip-padding border-b border-black/20 dark:border-white/20">
       <!-- Left -->
@@ -69,18 +59,13 @@
 
     <div class="bg-black/6 dark:bg-black h-full p-4 bg-clip-padding border-r border-black/20 dark:border-white/20 grid grid-rows-[auto_1fr_auto] w-64" id="sidebar">
       <div class="grid grid-flow-row place-items-center">
-        <a class="grid grid-cols-[auto_1fr] place-items-center gap-2 mb-2 w-full rounded-lg hover:bg-black/8 hover:dark:bg-white/10" href="#">
-          <div class="block items-center rounded-md overflow-clip bg-clip-padding border border-lime-600/30 dark:border-lime-800/30 bg-lime-600/20 dark:bg-lime-800/20 hover:bg-lime-600/30 hover:dark:bg-lime-800/50 size-8 grid place-items-center">
-            <div class="text-xl text-lime-600 dark:text-lime-700">
-              C
-            </div>
-          </div>
-          <span class="place-self-start my-auto">cone</span>
+        <a class="block items-center rounded-lg hover:bg-black/8 hover:dark:bg-white/10 py-1 px-2 w-full grid grid-cols-[auto_1fr_auto] gap-2" href="#">
+          <img class="size-5 rounded-sm" src="/assets/acme.co.png"/>
+          <span class="place-self-start my-auto">ACME Corp.</span>
         </a>
         <a class="block items-center rounded-lg hover:bg-black/8 hover:dark:bg-white/10 py-1 px-2 w-full grid grid-cols-[auto_1fr_auto] gap-2" href="#">
           <i data-lucide="tickets" class="size-5 text-black/60 dark:text-white/60"></i>
           Tickets
-          <i data-lucide="chevron-right" class="size-4 my-auto"></i>
         </a>
         <a class="block items-center rounded-lg hover:bg-black/8 hover:dark:bg-white/10 py-1 px-2 w-full grid grid-cols-[auto_1fr_auto] gap-2" href="#">
           <i data-lucide="panels-top-left" class="size-5 text-black/60 dark:text-white/60"></i>
@@ -92,7 +77,15 @@
           Wiki
           <i data-lucide="chevron-right" class="size-4 my-auto"></i>
         </a>
-        <hr class="border-black/20 dark:border-white/20 rounded-full m-2 w-full">
+        <hr class="border-black/20 dark:border-white/20 rounded-full m-4 w-full">
+        <a class="block items-center rounded-lg hover:bg-black/8 hover:dark:bg-white/10 py-1 px-2 w-full grid grid-cols-[auto_1fr_auto] gap-2" href="#">
+          <div class="block items-center rounded-sm overflow-clip bg-clip-padding border border-lime-600/30 dark:border-lime-800/30 bg-lime-600/20 dark:bg-lime-800/20 size-5 grid place-items-center">
+            <div class="text-xs text-lime-600 dark:text-lime-700 -translate-y-px">
+              C
+            </div>
+          </div>
+          <span class="place-self-start my-auto">cone</span>
+        </a>
         <a class="block items-center rounded-lg hover:bg-black/8 hover:dark:bg-white/10 py-1 px-2 w-full grid grid-cols-[auto_1fr_auto] gap-2" href="#">
           <i data-lucide="code" class="size-5 text-black/60 dark:text-white/60"></i>
           Code
@@ -116,187 +109,186 @@
     </div>
 
     <!-- Content -->
-    <div class="grid dark:bg-white/8">
-      <div class="grid grid-cols-[1fr_auto] grid-rows-[auto_1fr]">
-        <div class="border-b border-black/20 dark:border-white/20 h-12 col-span-full grid grid-cols-[auto_1fr] place-items-center pl-4 pr-2">
-          <div class="grid grid-flow-col gap-2">
-            <a class="grid grid-flow-col gap-2 place-items-center hover:underline" href="#">
-              <img class="size-5 rounded-sm" src="/assets/acme.co.png"/>
-              acme.co
-            </a>
-            <span class="opacity-50">/</span>
-            <a class="font-bold grid grid-flow-col gap-2 place-items-center" href="#">
-              <div class="block items-center rounded-sm overflow-clip bg-clip-padding border border-lime-600/30 dark:border-lime-800/30 bg-lime-600/20 dark:bg-lime-800/20 size-5 grid place-items-center">
-                <div class="text-xs text-lime-600 dark:text-lime-700 -translate-y-px">
-                  C
-                </div>
+    <div class="grid grid-cols-[1fr_auto] grid-rows-[auto_1fr] dark:bg-white/8 h-[calc(100vh_-_var(--spacing)_*_16)]">
+      <div class="border-b border-black/20 dark:border-white/20 h-12 col-span-full grid grid-cols-[auto_1fr] place-items-center pl-4 pr-2">
+        <div class="grid grid-flow-col gap-2">
+          <a class="grid grid-flow-col gap-2 place-items-center hover:underline" href="#">
+            <img class="size-5 rounded-sm" src="/assets/acme.co.png"/>
+            acme.co
+          </a>
+          <span class="opacity-50">/</span>
+          <a class="font-bold grid grid-flow-col gap-2 place-items-center" href="#">
+            <div class="block items-center rounded-sm overflow-clip bg-clip-padding border border-lime-600/30 dark:border-lime-800/30 bg-lime-600/20 dark:bg-lime-800/20 size-5 grid place-items-center">
+              <div class="text-xs text-lime-600 dark:text-lime-700 -translate-y-px">
+                C
               </div>
-              <span class="hover:underline">
-                cone
-              </span>
-            </a>
-          </div>
-          <div class="grid grid-flow-col gap-[1px] place-self-end my-auto">
-            <button class="py-1 px-3 rounded-l-lg bg-black/20 hover:bg-black/30 dark:bg-white/20 hover:dark:bg-white/30 cursor-pointer grid grid-flow-col place-items-center gap-2">
-              <i data-lucide="star" class="size-5"></i>
-              <span class="font-bold">Star</span>
-            </button>
-            <button class="py-1 px-3 rounded-r-lg bg-black/20 hover:bg-black/30 dark:bg-white/20 hover:dark:bg-white/30 cursor-pointer grid grid-flow-col place-items-center gap-2">
-              <span class="font-bold">278</span>
-            </button>
-          </div>
+            </div>
+            <span class="hover:underline">
+              cone
+            </span>
+          </a>
+        </div>
+        <div class="grid grid-flow-col gap-[1px] place-self-end my-auto">
+          <button class="py-1 px-3 rounded-l-lg bg-black/20 hover:bg-black/30 dark:bg-white/20 hover:dark:bg-white/30 cursor-pointer grid grid-flow-col place-items-center gap-2">
+            <i data-lucide="star" class="size-5"></i>
+            <span class="font-bold">Star</span>
+          </button>
+          <button class="py-1 px-3 rounded-r-lg bg-black/20 hover:bg-black/30 dark:bg-white/20 hover:dark:bg-white/30 cursor-pointer grid grid-flow-col place-items-center gap-2">
+            <span class="font-bold">278</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="h-full grid grid-rows-[auto_auto_auto_1fr]">
+        <div class="h-12 grid grid-cols-[auto_1fr] place-items-center px-2  bg-clip-padding border-b border-black/20 dark:border-white/20">
+          <button class="py-1 px-2 rounded-lg bg-black/10 hover:bg-black/20 dark:bg-white/10 hover:dark:bg-white/20 cursor-pointer grid grid-flow-col place-items-center gap-2">
+            <i data-lucide="git-branch" class="size-5"></i>
+            <span class="font-mono translate-y-px">main</span>
+            <i data-lucide="chevron-down" class="size-4 my-auto"></i>
+          </button>
+          <button class="py-1 px-2 rounded-lg bg-green-400/70 dark:bg-green-400/70 hover:bg-green-400/90 cursor-pointer grid grid-flow-col place-items-center gap-2 text-black/80 place-self-end my-auto">
+            <span class="font-bold">Code</span>
+            <i data-lucide="chevron-down" class="size-4 my-auto"></i>
+          </button>
         </div>
 
-        <div class="h-full grid grid-rows-[auto_auto_auto_1fr]">
-          <div class="h-12 grid grid-cols-[auto_1fr] place-items-center px-2  bg-clip-padding border-b border-black/20 dark:border-white/20">
-            <button class="py-1 px-2 rounded-lg bg-black/10 hover:bg-black/20 dark:bg-white/10 hover:dark:bg-white/20 cursor-pointer grid grid-flow-col place-items-center gap-2">
-              <i data-lucide="git-branch" class="size-5"></i>
-              <span class="font-mono translate-y-px">main</span>
-              <i data-lucide="chevron-down" class="size-4 my-auto"></i>
-            </button>
-            <button class="py-1 px-2 rounded-lg bg-green-400/70 dark:bg-green-400/70 hover:bg-green-400/90 cursor-pointer grid grid-flow-col place-items-center gap-2 text-black/80 place-self-end my-auto">
-              <span class="font-bold">Code</span>
-              <i data-lucide="chevron-down" class="size-4 my-auto"></i>
+        <div class="p-2 grid grid-cols-[auto_1fr_auto_auto] gap-2  bg-clip-padding border-b border-black/20 dark:border-white/20">
+          <a href="#" class="block rounded-md overflow-clip size-12">
+            <img src="/assets/jsmith.png"/>
+          </a>
+          <div class="grid grid-flow-row">
+            <div class="font-[700]">
+              feat(auth): add JWT refresh token rotation support
+            </div>
+            <div>
+              <a href="#" class="hover:underline">John Smith</a> <span class="text-black/50 dark:text-white/50">authored 4 days ago and committed 3 days ago.</span>
+            </div>
+          </div>
+          <div class="grid grid-flow-col my-auto">
+            <div class="py-1 px-3 rounded-l-lg bg-black/10 dark:bg-white/10 grid grid-flow-col place-items-center gap-2 text-black/60 dark:text-white/60">
+              <span class="font-mono translate-y-px">884d29e5</span>
+            </div>
+            <button class="py-1 px-2 rounded-r-lg bg-black/20 hover:bg-black/30 dark:bg-white/20 hover:dark:bg-white/30 cursor-pointer grid grid-flow-col place-items-center gap-2 text-black/60 dark:text-white/60">
+              <i data-lucide="copy" class="size-4"></i>
             </button>
           </div>
+          <button class="py-1 px-2 rounded-lg bg-black/20 hover:bg-black/30 dark:bg-white/20 hover:dark:bg-white/30 cursor-pointer grid grid-flow-col place-items-center gap-2 my-auto h-8 mr-2 font-[500]">
+            History
+          </button>
+        </div>
 
-          <div class="p-2 grid grid-cols-[auto_1fr_auto_auto] gap-2  bg-clip-padding border-b border-black/20 dark:border-white/20">
-            <a href="#" class="block rounded-md overflow-clip size-12">
-              <img src="/assets/jsmith.png"/>
-            </a>
-            <div class="grid grid-flow-row">
-              <div class="font-[700]">
-                feat(auth): add JWT refresh token rotation support
-              </div>
-              <div>
-                <a href="#" class="hover:underline">John Smith</a> <span class="text-black/50 dark:text-white/50">authored 4 days ago and committed 3 days ago.</span>
-              </div>
-            </div>
-            <div class="grid grid-flow-col my-auto">
-              <div class="py-1 px-3 rounded-l-lg bg-black/10 dark:bg-white/10 grid grid-flow-col place-items-center gap-2 text-black/60 dark:text-white/60">
-                <span class="font-mono translate-y-px">884d29e5</span>
-              </div>
-              <button class="py-1 px-2 rounded-r-lg bg-black/20 hover:bg-black/30 dark:bg-white/20 hover:dark:bg-white/30 cursor-pointer grid grid-flow-col place-items-center gap-2 text-black/60 dark:text-white/60">
-                <i data-lucide="copy" class="size-4"></i>
-              </button>
-            </div>
-            <button class="py-1 px-2 rounded-lg bg-black/20 hover:bg-black/30 dark:bg-white/20 hover:dark:bg-white/30 cursor-pointer grid grid-flow-col place-items-center gap-2 my-auto h-8 mr-2 font-[500]">
-              History
-            </button>
+        <table class="table-fixed  bg-clip-padding border-b border-black/20 dark:border-white/20">
+          <thead>
+            <tr class="h-12 bg-black/8 dark:bg-white/8">
+              <th class="w-[40%] text-left pl-4">Name</th>
+              <th class="w-[40%] text-left">Last commit</th>
+              <th class="w-[20%] text-right pr-4">Last update</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-black/2 dark:bg-white/2  bg-clip-padding border-t border-white dark:border-black">
+              <td class="h-12 pl-4 flex flex-auto-col place-items-center gap-4">
+                <i data-lucide="folder" class="size-4"></i>
+                <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-32"></div>
+              </td>
+              <td class="h-12">
+                <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-64"></div>
+              </td>
+              <td class="h-12 pr-4">
+                <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-24 ml-auto"></div>
+              </td>
+            <tr class="bg-black/2 dark:bg-white/2  bg-clip-padding border-t border-white dark:border-black">
+              <td class="h-12 pl-4 flex flex-auto-col place-items-center gap-4">
+                <i data-lucide="folder" class="size-4"></i>
+                <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-32"></div>
+              </td>
+              <td class="h-12">
+                <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-64"></div>
+              </td>
+              <td class="h-12 pr-4">
+                <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-24 ml-auto"></div>
+              </td>
+            <tr class="bg-black/2 dark:bg-white/2  bg-clip-padding border-t border-white dark:border-black">
+              <td class="h-12 pl-4 flex flex-auto-col place-items-center gap-4">
+                <i data-lucide="folder" class="size-4"></i>
+                <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-32"></div>
+              </td>
+              <td class="h-12">
+                <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-64"></div>
+              </td>
+              <td class="h-12 pr-4">
+                <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-24 ml-auto"></div>
+              </td>
+            <tr class="bg-black/2 dark:bg-white/2  bg-clip-padding border-t border-white dark:border-black">
+              <td class="h-12 pl-4 flex flex-auto-col place-items-center gap-4">
+                <i data-lucide="folder" class="size-4"></i>
+                <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-32"></div>
+              </td>
+              <td class="h-12">
+                <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-64"></div>
+              </td>
+              <td class="h-12 pr-4">
+                <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-24 ml-auto"></div>
+              </td>
+            <tr class="bg-black/2 dark:bg-white/2  bg-clip-padding border-t border-white dark:border-black">
+              <td class="h-12 pl-4 flex flex-auto-col place-items-center gap-4">
+                <i class="devicon-typescript-plain"></i>
+                <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-32"></div>
+              </td>
+              <td class="h-12">
+                <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-64"></div>
+              </td>
+              <td class="h-12 pr-4">
+                <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-24 ml-auto"></div>
+              </td>
+            <tr class="bg-black/2 dark:bg-white/2  bg-clip-padding border-t border-white dark:border-black">
+              <td class="h-12 pl-4 flex flex-auto-col place-items-center gap-4">
+                <i class="devicon-markdown-original"></i>
+                <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-32"></div>
+              </td>
+              <td class="h-12">
+                <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-64"></div>
+              </td>
+              <td class="h-12 pr-4">
+                <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-24 ml-auto"></div>
+              </td>
+            <tr class="bg-black/2 dark:bg-white/2  bg-clip-padding border-t border-white dark:border-black">
+              <td class="h-12 pl-4 flex flex-auto-col place-items-center gap-4">
+                <i class="devicon-rust-original"></i>
+                <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-32"></div>
+              </td>
+              <td class="h-12">
+                <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-64"></div>
+              </td>
+              <td class="h-12 pr-4">
+                <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-24 ml-auto"></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div>
+          <div class="h-12 bg-black/8 dark:bg-white/8 font-[500] grid grid-cols-[auto_auto_1fr] place-items-center bg-clip-padding border-b border-black/20 dark:border-white/20">
+            <i data-lucide="file-text" class="size-5 inline mx-4"></i>
+            README.md
           </div>
-
-          <table class="table-fixed  bg-clip-padding border-b border-black/20 dark:border-white/20">
-            <thead>
-              <tr class="h-12 bg-black/8 dark:bg-white/8">
-                <th class="w-[40%] text-left pl-4">Name</th>
-                <th class="w-[40%] text-left">Last commit</th>
-                <th class="w-[20%] text-right pr-4">Last update</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="h-12 bg-black/2 dark:bg-white/2  bg-clip-padding border-t border-white dark:border-black">
-                <td class="h-full pl-4 flex flex-auto-col place-items-center gap-4">
-                  <i data-lucide="folder" class="size-4 my-auto"></i>
-                  <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-32"></div>
-                </td>
-                <td class="h-full">
-                  <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-64"></div>
-                </td>
-                <td class="h-full pr-4">
-                  <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-24 my-auto ml-auto"></div>
-                </td>
-              <tr class="h-12 bg-black/2 dark:bg-white/2  bg-clip-padding border-t border-white dark:border-black">
-                <td class="h-full pl-4 flex flex-auto-col place-items-center gap-4">
-                  <i data-lucide="folder" class="size-4 my-auto"></i>
-                  <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-32"></div>
-                </td>
-                <td class="h-full">
-                  <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-64"></div>
-                </td>
-                <td class="h-full pr-4">
-                  <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-24 my-auto ml-auto"></div>
-                </td>
-              <tr class="h-12 bg-black/2 dark:bg-white/2  bg-clip-padding border-t border-white dark:border-black">
-                <td class="h-full pl-4 flex flex-auto-col place-items-center gap-4">
-                  <i data-lucide="folder" class="size-4 my-auto"></i>
-                  <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-32"></div>
-                </td>
-                <td class="h-full">
-                  <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-64"></div>
-                </td>
-                <td class="h-full pr-4">
-                  <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-24 my-auto ml-auto"></div>
-                </td>
-              <tr class="h-12 bg-black/2 dark:bg-white/2  bg-clip-padding border-t border-white dark:border-black">
-                <td class="h-full pl-4 flex flex-auto-col place-items-center gap-4">
-                  <i data-lucide="folder" class="size-4 my-auto"></i>
-                  <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-32"></div>
-                </td>
-                <td class="h-full">
-                  <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-64"></div>
-                </td>
-                <td class="h-full pr-4">
-                  <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-24 my-auto ml-auto"></div>
-                </td>
-              <tr class="h-12 bg-black/2 dark:bg-white/2  bg-clip-padding border-t border-white dark:border-black">
-                <td class="h-full pl-4 flex flex-auto-col place-items-center gap-4">
-                  <i class="devicon-typescript-plain"></i>
-                  <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-32"></div>
-                </td>
-                <td class="h-full">
-                  <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-64"></div>
-                </td>
-                <td class="h-full pr-4">
-                  <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-24 my-auto ml-auto"></div>
-                </td>
-              <tr class="h-12 bg-black/2 dark:bg-white/2  bg-clip-padding border-t border-white dark:border-black">
-                <td class="h-full pl-4 flex flex-auto-col place-items-center gap-4">
-                  <i class="devicon-markdown-original"></i>
-                  <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-32"></div>
-                </td>
-                <td class="h-full">
-                  <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-64"></div>
-                </td>
-                <td class="h-full pr-4">
-                  <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-24 my-auto ml-auto"></div>
-                </td>
-              <tr class="h-12 bg-black/2 dark:bg-white/2  bg-clip-padding border-t border-white dark:border-black">
-                <td class="h-full pl-4 flex flex-auto-col place-items-center gap-4">
-                  <i class="devicon-rust-original"></i>
-                  <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-32"></div>
-                </td>
-                <td class="h-full">
-                  <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-64"></div>
-                </td>
-                <td class="h-full pr-4">
-                  <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-24 my-auto ml-auto"></div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div>
-            <div class="h-12 bg-black/8 dark:bg-white/8 font-[500] grid grid-cols-[auto_auto_1fr] place-items-center bg-clip-padding border-b border-black/20 dark:border-white/20">
-              <i data-lucide="file-text" class="size-5 inline mx-4"></i>
-              README.md
-            </div>
-            <div class="p-8">
-              <h1 id="cone" class="text-3xl font-bold mb-2">Cone</h1>
-              <blockquote class="place-items-center bg-clip-padding border-l-4 border-black/20 dark:border-white/20 p-2 pl-4 my-2 bg-black/6 dark:bg-white/3">
-                <p>A modern, open-source Git productivity suite that seamlessly combines project management and developer ergonomics.</p>
-              </blockquote>
-              <p>Cone integrates source control, issue tracking, code review, and project planning into one fast, developer-first platform. Self-host it, extend it, and own your workflow.</p>
-              <hr class="my-4 border-black/20 dark:border-white/20">
-              <h2 class="text-2xl font-bold my-4" id="features">✨ Features</h2>
-              <ul class="list-disc pl-8">
-                <li>🧠 <strong>Unified Workflows</strong> — Issues, pull requests, and commits are deeply linked.</li>
-                <li>⚡ <strong>Blazing Fast UI</strong> — Built for performance and minimal friction.</li>
-                <li>🔐 <strong>Self-Hosted First</strong> — Full control over your data.</li>
-                <li>🔄 <strong>Git Native</strong> — Designed around Git, not bolted onto it.</li>
-                <li>📊 <strong>Agile &amp; Beyond</strong> — Kanban, sprints, roadmaps, milestones.</li>
-                <li>🔌 <strong>Extensible</strong> — Plugin system + API.</li>
-              </ul>
-              <hr class="my-4 border-black/20 dark:border-white/20">
-              <h2 class="text-2xl font-bold my-2" id="quick-start">🚀 Quick Start</h2>
+          <div class="p-8">
+            <h1 id="cone" class="text-3xl font-bold mb-2">Cone</h1>
+            <blockquote class="place-items-center bg-clip-padding border-l-4 border-black/20 dark:border-white/20 p-2 pl-4 my-2 bg-black/6 dark:bg-white/3">
+              <p>A modern, open-source Git productivity suite that seamlessly combines project management and developer ergonomics.</p>
+            </blockquote>
+            <p>Cone integrates source control, issue tracking, code review, and project planning into one fast, developer-first platform. Self-host it, extend it, and own your workflow.</p>
+            <hr class="my-4 border-black/20 dark:border-white/20">
+            <h2 class="text-2xl font-bold my-4" id="features">✨ Features</h2>
+            <ul class="list-disc pl-8">
+              <li>🧠 <strong>Unified Workflows</strong> — Issues, pull requests, and commits are deeply linked.</li>
+              <li>⚡ <strong>Blazing Fast UI</strong> — Built for performance and minimal friction.</li>
+              <li>🔐 <strong>Self-Hosted First</strong> — Full control over your data.</li>
+              <li>🔄 <strong>Git Native</strong> — Designed around Git, not bolted onto it.</li>
+              <li>📊 <strong>Agile &amp; Beyond</strong> — Kanban, sprints, roadmaps, milestones.</li>
+              <li>🔌 <strong>Extensible</strong> — Plugin system + API.</li>
+            </ul>
+            <hr class="my-4 border-black/20 dark:border-white/20">
+            <h2 class="text-2xl font-bold my-2" id="quick-start">🚀 Quick Start</h2>
 <pre class="p-4 mt-4 rounded-lg bg-black/4 dark:bg-white/4"><code class="lang-bash"><span class="hljs-comment"># Clone the repository</span>
 git <span class="hljs-built_in">clone</span> https://github.com/your-org/cone.git
 
@@ -305,63 +297,62 @@ git <span class="hljs-built_in">clone</span> https://github.com/your-org/cone.gi
 <span class="hljs-comment"># Start with Docker</span>
 docker compose up <span class="hljs-_">-d</span>
 </code></pre>
-            </div>
           </div>
         </div>
+      </div>
 
-        <div class="border-l border-black/20 dark:border-white/20 h-full w-80 p-4 flex flex-col gap-2">
-          <div>
-            <h4 class="font-bold">
-              Project information
-            </h4>
-            A modern, open-source git productivity suite.
-          </div>
-          <div class="mt-1 h-2.5 w-full overflow-clip rounded-full grid grid-cols-[55%_25%_10%_10%] gap-[1px]">
-            <span class="w-full bg-amber-600"></span>
-            <span class="w-full bg-sky-600"></span>
-            <span class="w-full bg-lime-600"></span>
-            <span class="w-full bg-gray-400"></span>
-          </div>
-          <hr class="border-black/20 dark:border-white/20 rounded-full my-1">
-          <a href="#" class="hover:underline grid grid-cols-[auto_auto_auto_1fr] gap-2 place-items-center">
-            <i data-lucide="git-commit-horizontal" class="size-5 inline"></i>
-            <span class="font-bold">5000</span> Commits
-          </a>
-          <a href="#" class="hover:underline grid grid-cols-[auto_auto_auto_1fr] gap-2 place-items-center">
-            <i data-lucide="git-branch" class="size-5 inline"></i>
-            <span class="font-bold">4</span> Branches
-          </a>
-          <a href="#" class="hover:underline grid grid-cols-[auto_auto_auto_1fr] gap-2 place-items-center">
-            <i data-lucide="tag" class="size-5 inline"></i>
-            <span class="font-bold">26</span> Tags
-          </a>
-          <a href="#" class="hover:underline grid grid-cols-[auto_auto_auto_1fr] gap-2 place-items-center">
-            <i data-lucide="rocket" class="size-5 inline"></i>
-            <span class="font-bold">18</span> Releases
-          </a>
-          <hr class="border-black/20 dark:border-white/20 rounded-full my-1">
+      <div class="border-l border-black/20 dark:border-white/20 h-full w-80 p-4 flex flex-col gap-2">
+        <div>
           <h4 class="font-bold">
-            Pinned
+            Project information
           </h4>
-          <a href="#" class="hover:underline grid grid-cols-[auto_auto_auto_1fr] gap-2 place-items-center">
-            <i data-lucide="file-text" class="size-5 inline"></i>
-            README
-          </a>
-          <a href="#" class="hover:underline grid grid-cols-[auto_auto_auto_1fr] gap-2 place-items-center">
-            <i data-lucide="file-text" class="size-5 inline"></i>
-            CONTRIBUTING
-          </a>
-          <a href="#" class="hover:underline grid grid-cols-[auto_auto_auto_1fr] gap-2 place-items-center">
-            <i data-lucide="scale" class="size-5 inline"></i>
-            GPLv3 License
-          </a>
-          <hr class="border-black/20 dark:border-white/20 rounded-full my-1">
-          <div>
-            <h4 class="font-bold">
-              Created on
-            </h4>
-            February 02, 2026
-          </div>
+          A modern, open-source git productivity suite.
+        </div>
+        <div class="mt-1 h-2.5 w-full overflow-clip rounded-full grid grid-cols-[55%_25%_10%_10%] gap-[1px]">
+          <span class="w-full bg-amber-600"></span>
+          <span class="w-full bg-sky-600"></span>
+          <span class="w-full bg-lime-600"></span>
+          <span class="w-full bg-gray-400"></span>
+        </div>
+        <hr class="border-black/20 dark:border-white/20 rounded-full my-1">
+        <a href="#" class="hover:underline grid grid-cols-[auto_auto_auto_1fr] gap-2 place-items-center">
+          <i data-lucide="git-commit-horizontal" class="size-5 inline"></i>
+          <span class="font-bold">5000</span> Commits
+        </a>
+        <a href="#" class="hover:underline grid grid-cols-[auto_auto_auto_1fr] gap-2 place-items-center">
+          <i data-lucide="git-branch" class="size-5 inline"></i>
+          <span class="font-bold">4</span> Branches
+        </a>
+        <a href="#" class="hover:underline grid grid-cols-[auto_auto_auto_1fr] gap-2 place-items-center">
+          <i data-lucide="tag" class="size-5 inline"></i>
+          <span class="font-bold">26</span> Tags
+        </a>
+        <a href="#" class="hover:underline grid grid-cols-[auto_auto_auto_1fr] gap-2 place-items-center">
+          <i data-lucide="rocket" class="size-5 inline"></i>
+          <span class="font-bold">18</span> Releases
+        </a>
+        <hr class="border-black/20 dark:border-white/20 rounded-full my-1">
+        <h4 class="font-bold">
+          Pinned
+        </h4>
+        <a href="#" class="hover:underline grid grid-cols-[auto_auto_auto_1fr] gap-2 place-items-center">
+          <i data-lucide="file-text" class="size-5 inline"></i>
+          README
+        </a>
+        <a href="#" class="hover:underline grid grid-cols-[auto_auto_auto_1fr] gap-2 place-items-center">
+          <i data-lucide="file-text" class="size-5 inline"></i>
+          CONTRIBUTING
+        </a>
+        <a href="#" class="hover:underline grid grid-cols-[auto_auto_auto_1fr] gap-2 place-items-center">
+          <i data-lucide="scale" class="size-5 inline"></i>
+          GPLv3 License
+        </a>
+        <hr class="border-black/20 dark:border-white/20 rounded-full my-1">
+        <div>
+          <h4 class="font-bold">
+            Created on
+          </h4>
+          February 02, 2026
         </div>
       </div>
     </div>
@@ -417,13 +408,9 @@ docker compose up <span class="hljs-_">-d</span>
             });
       });
 
-
-
     let toggleHidden = id => {
       document.getElementById(id).toggleAttribute('hidden');
     }
-
-
 
     let sidebar = document.getElementById('sidebar');
     let sidebar_btn = document.getElementById('sidebar-btn')

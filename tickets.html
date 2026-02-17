@@ -89,28 +89,32 @@
     </div>
 
     <!-- Content -->
-    <div class="grid grid-rows-[auto_1fr_auto] dark:bg-white/8">
+    <div class="grid grid-rows-[auto_auto_1fr] dark:bg-white/8">
       <div class="border-b border-black/20 dark:border-white/20 h-12 col-span-full grid grid-cols-[auto_1fr] place-items-center pl-4 pr-2">
         <div class="grid grid-flow-col gap-2">
           <a class="grid grid-flow-col gap-2 place-items-center hover:underline" href="#">
             <img class="size-5 rounded-sm" src="/assets/acme.co.png"/>
             acme.co
           </a>
-          <i data-lucide="chevron-right" class="size-4 my-auto opacity-50"></i>
+          <span class="opacity-50">/</span>
           <a class="font-bold grid grid-flow-col gap-2 place-items-center hover:underline" href="#">
             Tickets
           </a>
         </div>
-        <div class="grid grid-flow-col gap-2 place-self-end my-auto">
-          <button class="p-1.5 rounded-lg bg-black/20 hover:bg-black/30 dark:bg-white/20 hover:dark:bg-white/30 cursor-pointer grid grid-flow-col place-items-center gap-2">
-            <i data-lucide="filter" class="size-5"></i>
-          </button>
-          <button class="p-1.5 rounded-lg bg-black/20 hover:bg-black/30 dark:bg-white/20 hover:dark:bg-white/30 cursor-pointer grid grid-flow-col place-items-center gap-2">
-            <i data-lucide="plus" class="size-5"></i>
+      </div>
+      <div class="border-b border-black/20 dark:border-white/20 h-16 col-span-full grid grid-cols-[1fr_auto] place-items-center px-3 gap-2">
+        <div class="grid grid-cols-[1fr_auto] w-full">
+          <input placeholder="Search tickets..." value="is:ticket" class="font-mono py-1.5 px-2.5 rounded-l-lg w-full border border-black/20 dark:border-white/20"></input>
+          <button class="py-1.5 px-2.5 rounded-r-lg bg-clip-padding bg-black/10 hover:bg-black/20 dark:bg-white/10 hover:dark:bg-white/20 cursor-pointer grid grid-flow-col place-items-center gap-2 border-r border-y border-black/20 dark:border-white/20">
+            <i data-lucide="search" class="size-5"></i>
           </button>
         </div>
+        <button class="p-1.5 rounded-lg bg-green-400/70 dark:bg-green-400/70 hover:bg-green-400/90 text-black cursor-pointer grid grid-flow-col place-items-center gap-2">
+          <i data-lucide="plus" class="size-5"></i>
+          New ticket
+        </button>
       </div>
-      <div class="grid grid-rows-[auto_1fr] max-h-[calc(100vh_-_(var(--spacing)_*_28))] overflow-scroll" id="ticket-list">
+      <div class="grid grid-rows-[auto_1fr] max-h-[calc(100vh_-_(var(--spacing)_*_44))] overflow-scroll" id="ticket-list">
         <table class="table-fixed h-fit" >
           <thead>
             <tr class="h-12 bg-black/8 dark:bg-white/8">
