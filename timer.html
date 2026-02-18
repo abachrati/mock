@@ -58,34 +58,143 @@
     <!-- Sidebar -->
 
     <div class="bg-black/6 dark:bg-black h-full p-4 bg-clip-padding border-r border-black/20 dark:border-white/20 grid grid-rows-[auto_1fr_auto] w-64" id="sidebar">
-      <div>
-        <a class="block items-center rounded-lg hover:bg-black/8 hover:dark:bg-white/10 py-1 px-2 w-full grid grid-cols-[auto_1fr_auto] gap-2" href="/tickets.html">
-          <i data-lucide="tickets" class="size-5 text-black/60 dark:text-white/60"></i>
-          Ticket list view
+      <div class="grid grid-flow-row place-items-center">
+        <a class="block items-center rounded-lg hover:bg-black/8 hover:dark:bg-white/10 py-1 px-2 w-full grid grid-cols-[auto_1fr_auto] gap-2 mb-2" href="#">
+          <img class="size-5 rounded-sm" src="/assets/jsmith.png"/>
+          <span class="place-self-start my-auto">John Smith</span>
         </a>
-        <a class="block items-center rounded-lg hover:bg-black/8 hover:dark:bg-white/10 py-1 px-2 w-full grid grid-cols-[auto_1fr_auto] gap-2" href="/kanban.html">
-          <i data-lucide="panels-top-left" class="size-5 text-black/60 dark:text-white/60"></i>
-          Kanban view
-        </a>
-        <a class="block items-center rounded-lg hover:bg-black/8 hover:dark:bg-white/10 py-1 px-2 w-full grid grid-cols-[auto_1fr_auto] gap-2" href="/repo.html">
-          <i data-lucide="book-marked" class="size-5 text-black/60 dark:text-white/60"></i>
-          Repository view
-        </a>
-        <a class="block items-center rounded-lg hover:bg-black/8 hover:dark:bg-white/10 py-1 px-2 w-full grid grid-cols-[auto_1fr_auto] gap-2" href="/timer.html">
+        <a class="block items-center rounded-lg bg-black/8 dark:bg-white/10 hover:bg-black/4 hover:dark:bg-white/6 py-1 px-2 w-full grid grid-cols-[auto_1fr_auto] gap-2" href="#">
           <i data-lucide="timer" class="size-5 text-black/60 dark:text-white/60"></i>
-          Productivity view
+          Productivity
+        </a>
+        <a class="block items-center rounded-lg hover:bg-black/8 hover:dark:bg-white/10 py-1 px-2 w-full grid grid-cols-[auto_1fr_auto] gap-2" href="#">
+          <i data-lucide="book-marked" class="size-5 text-black/60 dark:text-white/60"></i>
+          Repositiories
+          <i data-lucide="chevron-right" class="size-4 my-auto"></i>
+        </a>
+        <a class="block items-center rounded-lg hover:bg-black/8 hover:dark:bg-white/10 py-1 px-2 w-full grid grid-cols-[auto_1fr_auto] gap-2" href="#">
+          <i data-lucide="panels-top-left" class="size-5 text-black/60 dark:text-white/60"></i>
+          Projects
+          <i data-lucide="chevron-right" class="size-4 my-auto"></i>
+        </a>
+      </div>
+      <div></div>
+      <div>
+        <a class="block items-center rounded-lg hover:bg-black/8 hover:dark:bg-white/10 py-1 px-2 w-full grid grid-cols-[auto_1fr] gap-2" href="#">
+          <i data-lucide="arrow-left-to-line" class="size-5 text-black/60 dark:text-white/60"></i>
+          Collapse sidebar
         </a>
       </div>
     </div>
 
     <!-- Content -->
-    <div class="grid grid-rows-[auto_auto_1fr] dark:bg-white/8 p-8 gap-2 text-lg">
-      <h1 class="col-span-full text-2xl font-[500]">Mock project UI</h1>
-      <div>
-        This is a mockup of the productivity/git tracker. It is completely static, has few interactive elements or working links. It isn't responsive, and some of the light-mode stuff might be broken. Links are on the sidebar, and you can get back here by pressing the cone in the top left corner.
+    <div class="grid grid-rows-[auto_auto_1fr] dark:bg-white/8">
+      <div class="border-b border-black/20 dark:border-white/20 h-12 col-span-full grid grid-cols-[auto_1fr] place-items-center pl-4 pr-2">
+        <div class="grid grid-flow-col gap-2">
+          <a class="grid grid-flow-col gap-2 place-items-center hover:underline" href="#">
+            <img class="size-5 rounded-sm" src="/assets/jsmith.png"/>
+            jsmith
+          </a>
+          <span class="opacity-50">/</span>
+          <a class="font-bold hover:underline" href="#">
+            Productivity
+          </a>
+        </div>
       </div>
-      <div>
-        The blindtext (descriptions, readmes, ticket names, etc.) was all generated using ChatGPT, and shouldn't be used elsewhere. It's all just filler.
+      <div class="h-200 grid grid-cols-[1fr_auto]">
+        <div class="grid grid-cols-[1fr_1fr_auto] w-fit h-fit gap-4 place-self-center">
+          <h1 class="col-span-full font-mono text-6xl font-[500]">01:51:09</h1>
+          <button class="py-1.5 px-2.5 rounded-lg bg-clip-padding dark:bg-blue-300/80 hover:dark:bg-blue-300 text-black font-[500] cursor-pointer grid grid-flow-col place-items-center gap-2 border dark:border-blue-200">
+            Resume
+          </button>
+          <button class="py-1.5 px-2.5 rounded-lg bg-clip-padding bg-black/10 hover:bg-black/20 dark:bg-white/10 hover:dark:bg-white/20 cursor-pointer grid grid-flow-col place-items-center gap-2 border border-black/20 dark:border-white/20">
+            End session
+          </button>
+          <button class="p-2 w-fit rounded-lg bg-clip-padding bg-black/10 hover:bg-black/20 dark:bg-white/10 hover:dark:bg-white/20 cursor-pointer grid grid-flow-col place-items-center gap-2 border border-black/20 dark:border-white/20 place-self-center">
+            <i data-lucide="settings" class="size-5"></i>
+          </button>
+          <h3 class="col-span-full place-self-center m-8 opacity-50">Next break in 10 minutes</h3>
+        </div>
+        <div class="w-120 m-8 grid grid-rows-[auto_auto_1fr] gap-2">
+          <div class="grid grid-flow-row gap-2">
+            <div class="grid grid-cols-[auto_1fr] place-items-center">
+              <h4 class="font-[500] text-lg">In focus</h4>
+              <button class="py-1.5 px-2.5  w-fit rounded-lg bg-clip-padding dark:bg-green-400/80 text-black font-[500] grid grid-flow-col place-items-center gap-2 border dark:border-green-200 place-self-end opacity-30">
+                <i data-lucide="check" class="size-5"></i>
+                Mark complete
+              </button>
+            </div>
+            <div class="relative border border-dashed border-black/20 dark:border-white/20 h-32 rounded-lg p-2 grid grid-flow-cols gap-2">
+            </div>
+          </div>
+          <div class="grid grid-flow-row gap-2">
+            <h4 class="font-[500] text-lg">Assigned to you</h4>
+            <div class="relative border border-black/20 dark:border-white/20 h-min rounded-lg p-2 grid grid-flow-cols gap-2 cursor-move">
+              <div class="font-[600] grid grid-cols-[auto_auto_1fr] gap-2 opacity-50">
+                <i data-lucide="tickets" class="size-5"></i>
+                CONE-05
+              </div>
+              <h4 class="font-[600]">Project Dashboard Widgets</h4>
+              <div>
+                Build customizable dashboard with draggable widgets
+              </div>
+              <div class="flex flex-auto-row gap-2">
+                <div class="bg-green-400/80 size-fit px-1 rounded-md font-[600] text-black/90">
+                  Feature
+                </div>
+                <div class="bg-blue-400/80 size-fit px-1 rounded-md font-[600] text-black/90">
+                  Frontend
+                </div>
+                <div class="bg-purple-400/80 size-fit px-1 rounded-md font-[600] text-black/90">
+                  Projects
+                </div>
+              </div>
+              <i data-lucide="circle-user" class="absolute size-5 right-2 top-2 opacity-50"></i>
+            </div>
+            <div class="relative border border-black/20 dark:border-white/20 h-min rounded-lg p-2 grid grid-flow-cols gap-2 cursor-move">
+              <div class="font-[600] grid grid-cols-[auto_auto_1fr] gap-2 opacity-50">
+                <i data-lucide="circle-dot" class="size-5"></i>
+                CONE-ISSUE-40
+              </div>
+              <h4 class="font-[600]">Diff Viewer Freezes on Large Pull Requests</h4>
+              <div>
+                Opening a PR with ~400 changed files causes the browser tab to freeze for ~10 seconds.
+              </div>
+              <div class="flex flex-auto-row gap-2">
+                <div class="bg-red-400/80 size-fit px-1 rounded-md font-[600] text-black/90">
+                  Performance
+                </div>
+                <div class="bg-blue-400/80 size-fit px-1 rounded-md font-[600] text-black/90">
+                  Frontend
+                </div>
+              </div>
+              <i data-lucide="circle-user" class="absolute size-5 right-2 top-2 opacity-50"></i>
+            </div>
+            <div class="relative border border-black/20 dark:border-white/20 h-min rounded-lg p-2 grid grid-flow-cols gap-2 cursor-move">
+              <div class="font-[600] grid grid-cols-[auto_auto_1fr] gap-2 place-items-center opacity-50">
+                <i data-lucide="git-pull-request-arrow" class="size-5"></i>
+                <div class="h-2 bg-black/30 dark:bg-white/30 rounded-full w-16"></div>
+              </div>
+              <h4 class="font-[600]">
+                <div class="h-2 bg-black/30 dark:bg-white/30 rounded-full w-48 my-1"></div>
+              </h4>
+              <div>
+                <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-80 my-1"></div>
+                <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-50 my-1 mt-2"></div>
+              </div>
+              <div class="flex flex-auto-row gap-2">
+                <div class="bg-black/10 hover:bg-black/20 dark:bg-white/10 hover:bg-white/20 size-fit p-2 rounded-md font-[600] text-black/90">
+                  <div class="h-2 bg-black/16 dark:bg-white/16 rounded-full w-16"></div>
+                </div>
+              </div>
+              <i data-lucide="circle-user" class="absolute size-5 right-2 top-2 opacity-50"></i>
+            </div>
+          </div>
+          <button class="py-1.5 px-2.5 rounded-lg bg-clip-padding bg-black/10 hover:bg-black/20 dark:bg-white/10 hover:dark:bg-white/20 cursor-pointer grid grid-flow-col place-items-center gap-2 border border-black/20 dark:border-white/20 w-fit h-fit">
+            <i data-lucide="Plus" class="size-5"></i>
+            Add more
+          </button>
+        </div>
       </div>
     </div>
 
